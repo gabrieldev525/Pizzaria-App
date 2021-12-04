@@ -18,14 +18,24 @@
     <string name="do_login">Faça login</string>
     <string name="personal_informations">Informações pessoais</string>
     <string name="full_name">Nome completo</string>
+    <string name="full_name_hint">Informe o seu nome completo</string>
     <string name="birth_date">Data de nascimento</string>
+    <string name="birth_date_hint">Informe a sua data de nascimento</string>
     <string name="cpf">CPF</string>
+    <string name="cpf_hint">Informe o seu CPF</string>
     <string name="cellphone">Celular</string>
+    <string name="cellphone_hint">Informe o seu celular</string>
     <string name="address">Endereço</string>
     <string name="street">Logradouro</string>
+    <string name="street_hint">Informe o logradouro</string>
+    <string name="zipcode">CEP</string>
+    <string name="zipcode_hint">Informe o CEP</string>
     <string name="city">Cidade</string>
+    <string name="city_hint">Informe a cidade que você mora</string>
     <string name="state">Estado</string>
+    <string name="state_hint">Informe o estado que você mora</string>
     <string name="number">Número</string>
+    <string name="number_hint">Informe o número da sua residência</string>
     <string name="access">Acesso</string>
     <string name="Signon">Cadastrar</string>
 </resources>

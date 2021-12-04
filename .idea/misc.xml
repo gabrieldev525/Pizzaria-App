@@ -9,7 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.13240740740740742" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16489361702127658" />
         <entry key="app/src/main/res/layout/login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/register.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/register.xml" value="0.4149453219927096" />
       </map>
     </option>
   </component>
@@ -18,5 +18,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>
