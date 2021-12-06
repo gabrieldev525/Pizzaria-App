@@ -41,4 +41,8 @@
 
     <!--  Pizza list  -->
     <string name="pizzas">Pizzas</string>
+
+    <!--  Complete Order  -->
+    <string name="order_successfully">Pedido realizado com sucesso</string>
+    <string name="order_successfully_description">Em instantes ele sairá para entrega</string>
 </resources>
