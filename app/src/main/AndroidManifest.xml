@@ -10,12 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PizzaDelivery">
         <activity
-            android:name=".views.LoginActivity"
-            android:exported="true">
-
+            android:name=".views.LoginActivity">
         </activity>
         <activity
-            android:name=".views.RegisterActivity"
+            android:name=".views.RegisterActivity">
+        </activity>
+        <activity
+            android:name=".views.PizzaListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -38,4 +38,7 @@
     <string name="number_hint">Informe o número da sua residência</string>
     <string name="access">Acesso</string>
     <string name="Signon">Cadastrar</string>
+
+    <!--  Pizza list  -->
+    <string name="pizzas">Pizzas</string>
 </resources>
