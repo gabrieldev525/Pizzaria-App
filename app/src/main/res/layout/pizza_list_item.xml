@@ -44,9 +44,9 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btn_to_detail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_weight="0"
                 android:background="@drawable/bg_button_circle"
@@ -59,7 +59,7 @@
                 android:paddingRight="0dp"
                 android:paddingBottom="0dp"
                 android:text="+"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 app:iconPadding="0dp" />
         </LinearLayout>
 

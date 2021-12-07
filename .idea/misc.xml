@@ -16,9 +16,9 @@
         <entry key="app/src/main/res/layout/completed_order.xml" value="0.33" />
         <entry key="app/src/main/res/layout/login.xml" value="0.3015267175572519" />
         <entry key="app/src/main/res/layout/payment_step_finish_order.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/pizza_detail.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/pizza_detail.xml" value="0.5" />
         <entry key="app/src/main/res/layout/pizza_list.xml" value="0.35572916666666665" />
-        <entry key="app/src/main/res/layout/pizza_list_item.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/pizza_list_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/register.xml" value="0.3177257525083612" />
       </map>
     </option>

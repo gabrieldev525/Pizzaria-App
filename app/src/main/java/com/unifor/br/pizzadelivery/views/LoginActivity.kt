@@ -20,11 +20,15 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login)
 
         supportActionBar?.hide()
+        authPresenter = AuthPresenter(this)
+
+        if(authPresenter.isUserLogged()) {
+            val intent = Intent(this, PizzaListActivity::class.java)
+            startActivity(intent)
+        }
 
         emailField = findViewById(R.id.edittext_email)
         passwordField = findViewById(R.id.edittext_password)
-
-        authPresenter = AuthPresenter(this)
     }
 
     fun onClickRegister(view: View) {

@@ -1,7 +1,9 @@
 package com.unifor.br.pizzadelivery.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.unifor.br.pizzadelivery.R
@@ -25,6 +27,5 @@ class PizzaListActivity : AppCompatActivity() {
             val adapter = PizzaListAdapter(this, result)
             listView.adapter = adapter
         }
-
     }
 }
