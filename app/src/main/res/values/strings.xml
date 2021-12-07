@@ -45,4 +45,10 @@
     <!--  Complete Order  -->
     <string name="order_successfully">Pedido realizado com sucesso</string>
     <string name="order_successfully_description">Em instantes ele sairá para entrega</string>
+
+    <!--  Step address finish order  -->
+    <string name="finish_order">Finalizar pedido</string>
+    <string name="delivery_address">Endereço de entrega</string>
+    <string name="current_location">Localização atual</string>
+    <string name="_continue">Continuar</string>
 </resources>

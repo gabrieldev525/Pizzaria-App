@@ -14,4 +14,5 @@
     <color name="text_color">#373737</color>
     <color name="bg_input_field">#E5E5E5</color>
     <color name="green">#17A11C</color>
+    <color name="gray_color">#F1F1F1</color>
 </resources>
