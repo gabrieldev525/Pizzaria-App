@@ -5,7 +5,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.unifor.br.pizzadelivery.models.User
 
 class AuthPresenter(private val activity: Activity) {
     private lateinit var auth: FirebaseAuth
@@ -21,10 +20,10 @@ class AuthPresenter(private val activity: Activity) {
 
     fun createAccount(
         email: String, password: String,
-        onFinish: (result: Boolean, firebaseUser: FirebaseUser?) -> Void) {
+        onFinish: (result: Boolean) -> Void) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(activity) { task ->
-                onFinish(task.isSuccessful, auth.currentUser)
+                onFinish(task.isSuccessful)
             }
     }
 
@@ -38,8 +37,7 @@ class AuthPresenter(private val activity: Activity) {
             }
     }
 
-    fun getCurrentUser(): User {
-        val currUser = auth.currentUser
-        return User(currUser?.email, null)
+    fun getCurrentUser(): FirebaseUser? {
+        return auth.currentUser
     }
 }

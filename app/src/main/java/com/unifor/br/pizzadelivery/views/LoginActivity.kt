@@ -27,6 +27,11 @@ class LoginActivity : AppCompatActivity() {
         authPresenter = AuthPresenter(this)
     }
 
+    fun onClickRegister(view: View) {
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
+    }
+
     fun onClickLogin(view: View) {
         if(emailField.text.trim().isEmpty() || passwordField.text.trim().isEmpty()) {
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()

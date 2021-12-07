@@ -3,8 +3,8 @@ package com.unifor.br.pizzadelivery.models
 import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
-class Pizza(
-    title: String, description: String, photo: String,
-    sizes: Map<String, PizzaSize>
+class UserAddress(
+    street: String, zip_code: String, city: String, state: String,
+    number: String
 ) {
 }
