@@ -22,7 +22,13 @@
             android:name=".views.OrderCompleteActivity">
         </activity>
         <activity
-            android:name=".views.AddressStepOrderActivity"
+            android:name=".views.AddressStepOrderActivity">
+        </activity>
+        <activity
+            android:name=".views.PaymentStepOrderActivity">
+        </activity>
+        <activity
+            android:name=".views.PizzaDetailActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

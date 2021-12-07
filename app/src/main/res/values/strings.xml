@@ -51,4 +51,14 @@
     <string name="delivery_address">Endereço de entrega</string>
     <string name="current_location">Localização atual</string>
     <string name="_continue">Continuar</string>
+
+    <!--  Step payment finish order  -->
+    <string name="payment_method">Método de pagamento</string>
+    <string name="credit_debit_card">Cartão de crédito/débito</string>
+    <string name="money">Dinheiro</string>
+    <string name="pix">Pix</string>
+    <string name="payment_info_delivery">O pagamento é efetuado no ato da entrega</string>
+
+    <!--  pizza detail  -->
+    <string name="this_is_my_choice">Essa é a minha escolha</string>
 </resources>
