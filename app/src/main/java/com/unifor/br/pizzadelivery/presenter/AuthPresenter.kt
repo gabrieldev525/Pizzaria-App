@@ -8,6 +8,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.unifor.br.pizzadelivery.Constants
 import com.unifor.br.pizzadelivery.models.User
 import com.unifor.br.pizzadelivery.models.UserAddress
 
@@ -35,7 +36,7 @@ class AuthPresenter(private val activity: Activity) {
                 val user = User(userId, fullname, cpf, date_birth, cellphone, address)
 
                 if(task.isSuccessful) {
-                    database.child("users").child(userId).setValue(user.toHashMap())
+                    database.child(Constants.USERS_FIREBASE_KEY).child(userId).setValue(user.toHashMap())
                         .addOnCompleteListener() {
                             onFinish(task.isSuccessful, task!!.exception)
                         }

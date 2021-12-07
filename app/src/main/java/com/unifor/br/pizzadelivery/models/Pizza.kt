@@ -4,7 +4,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 class Pizza(
-    title: String, description: String? = "", photo: String? = "",
-    sizes: Map<String, PizzaSize> = mapOf()
+    val title: String, val description: String? = "", val photo: String? = "",
+    val sizes: HashMap<String, Any> = hashMapOf()
 ) {
 }
