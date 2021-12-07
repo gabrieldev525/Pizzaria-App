@@ -573,7 +573,8 @@
                 android:text="@string/Signon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/access_constraint" />
+                app:layout_constraintTop_toBottomOf="@+id/access_constraint"
+                android:onClick="onClickRegister" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/already_have_account_final_constraint"
@@ -600,7 +601,8 @@
                     android:text="@string/do_login"
                     android:textColor="@color/dark_red"
                     app:layout_constraintStart_toEndOf="@+id/txt_already_have_account_final"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickLogin"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 class Pizza(
-    title: String, description: String, photo: String,
-    sizes: Map<String, PizzaSize>
+    title: String, description: String? = "", photo: String? = "",
+    sizes: Map<String, PizzaSize> = mapOf()
 ) {
 }

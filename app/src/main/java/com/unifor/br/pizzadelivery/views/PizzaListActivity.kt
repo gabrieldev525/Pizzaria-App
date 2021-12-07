@@ -20,7 +20,7 @@ class PizzaListActivity : AppCompatActivity() {
 
         val list = ArrayList<Pizza>()
         for(i in 1..10) {
-            list.add(Pizza())
+            list.add(Pizza("Pizza 1"))
         }
 
         val adapter = PizzaListAdapter(this, list)
