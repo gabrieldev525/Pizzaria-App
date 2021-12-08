@@ -2,6 +2,8 @@ package com.unifor.br.pizzadelivery.views
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.widget.ListView
 import android.widget.TextView
@@ -20,15 +22,17 @@ import java.time.format.DateTimeFormatter
 import kotlin.coroutines.CoroutineContext
 
 class PizzaListActivity : BaseActivity(), CoroutineScope {
-    private var job: Job = Job()
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + job
-
     private lateinit var listView: ListView
     private lateinit var txtHour: TextView
     private lateinit var pizzaPresenter: PizzaPresenter
     private var pizzaList: ArrayList<Pizza> = ArrayList<Pizza>()
     private val client = OkHttpClient()
+
+    private var job: Job = Job()
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.Main + job
+
+    lateinit var mainHandler: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +47,13 @@ class PizzaListActivity : BaseActivity(), CoroutineScope {
             listView.adapter = adapter
         }
 
+        mainHandler = Handler(Looper.getMainLooper())
+
         launch {
-            fetchHours()
+            while(isActive) {
+                fetchHours()
+                delay(60000)
+            }
         }
     }
 
@@ -54,8 +63,9 @@ class PizzaListActivity : BaseActivity(), CoroutineScope {
     }
 
     fun onResult(result: String) {
-        val hour = result.split("T")[1].split(".")[0]
-        txtHour.text = hour
+        val hour = result.split("T")[1].split(".")[0].split(":")
+        val finalHour = "${hour[0]}:${hour[1]}"
+        txtHour.text = finalHour
     }
 
     fun makeToast(message: String) {
