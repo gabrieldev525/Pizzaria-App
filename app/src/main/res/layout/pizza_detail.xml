@@ -248,11 +248,12 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_start_order"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/bg_button"
+            android:onClick="onClickSubmitButton"
             android:text="@string/this_is_my_choice"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

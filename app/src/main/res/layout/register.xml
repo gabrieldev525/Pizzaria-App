@@ -306,10 +306,10 @@
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/txt_street" />
+                        app:layout_constraintTop_toBottomOf="@+id/txt_address_step_street" />
 
                     <TextView
-                        android:id="@+id/txt_street"
+                        android:id="@+id/txt_address_step_street"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/street"

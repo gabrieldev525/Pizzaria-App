@@ -1,7 +1,10 @@
 package com.unifor.br.pizzadelivery.views
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -99,6 +102,14 @@ class PizzaDetailActivity : AppCompatActivity() {
         } else {
             finish()
         }
+    }
+
+    fun onClickSubmitButton(view: View) {
+        val intent = Intent(this, AddressStepOrderActivity::class.java)
+        intent.putExtra("pizza_id", currPizza!!.id)
+        intent.putExtra("added_count", addedCount)
+        intent.putExtra("size", selectedSize!!.size)
+        startActivity(intent)
     }
 
     fun onClickSizeButton(size: PizzaSize?) {

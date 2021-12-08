@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/btn_address_step_option_current_location"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -76,10 +76,10 @@
             android:background="@drawable/bg_order_choice_item"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/btn_address_step_option_current_location">
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/txt_address_step_street"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -129,7 +129,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_address_step_continue"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
