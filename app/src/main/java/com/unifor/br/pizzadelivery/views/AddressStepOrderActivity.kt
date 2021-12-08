@@ -8,12 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.unifor.br.pizzadelivery.DeliveryAddressOptions
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.presenter.UserPresenter
-
-enum class DeliveryAddressOptions {
-    CURRENT_LOCATION, USER_LOCATION
-}
 
 class AddressStepOrderActivity : AppCompatActivity() {
     private lateinit var userPresenter: UserPresenter
@@ -26,12 +23,18 @@ class AddressStepOrderActivity : AppCompatActivity() {
 
     private var selectedOption: DeliveryAddressOptions = DeliveryAddressOptions.USER_LOCATION
 
+    private var pizza_id: String? = null
+    private var added_count: Int = 0
+    private var size: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.address_step_finish_order)
 
-        val pizza_id = intent.getStringExtra("pizza_id")
+        pizza_id = intent.getStringExtra("pizza_id")
+        added_count = intent.getIntExtra("added_count", 0)
+        size = intent.getStringExtra("size")
+
         if(pizza_id == null) {
             finish()
         }
@@ -63,9 +66,9 @@ class AddressStepOrderActivity : AppCompatActivity() {
 
     fun onClickSubmit(view: View) {
         val intent = Intent(this, PaymentStepOrderActivity::class.java)
-        intent.putExtra("pizza_id", intent.getStringExtra("pizza_id"))
-        intent.putExtra("added_count", intent.getStringExtra("added_count"))
-        intent.putExtra("size", intent.getStringExtra("size"))
+        intent.putExtra("pizza_id", pizza_id)
+        intent.putExtra("added_count", added_count)
+        intent.putExtra("size", size)
         intent.putExtra("location", selectedOption)
         startActivity(intent)
     }
