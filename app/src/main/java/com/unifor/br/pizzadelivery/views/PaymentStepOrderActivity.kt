@@ -4,15 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.unifor.br.pizzadelivery.BaseActivity
 import com.unifor.br.pizzadelivery.Constants
 import com.unifor.br.pizzadelivery.OrderPaymentOptions
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.presenter.AuthPresenter
 import com.unifor.br.pizzadelivery.presenter.OrderPresenter
 
-class PaymentStepOrderActivity : AppCompatActivity() {
+class PaymentStepOrderActivity : BaseActivity() {
     private var orderPresenter: OrderPresenter = OrderPresenter(this)
     private var authPresenter: AuthPresenter = AuthPresenter(this)
 

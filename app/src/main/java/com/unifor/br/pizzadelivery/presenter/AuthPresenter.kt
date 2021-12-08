@@ -68,6 +68,11 @@ class AuthPresenter(private val activity: Activity) {
             }
     }
 
+    fun logout(onFinish: (() -> Unit)) {
+        auth.signOut()
+        onFinish()
+    }
+
     fun getCurrentUser(): FirebaseUser? {
         return auth.currentUser
     }

@@ -1,12 +1,11 @@
 package com.unifor.br.pizzadelivery.views
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseUser
+import androidx.appcompat.app.AppCompatActivity
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.presenter.AuthPresenter
 

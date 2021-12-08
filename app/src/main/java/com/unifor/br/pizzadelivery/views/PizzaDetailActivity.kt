@@ -4,18 +4,17 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import com.unifor.br.pizzadelivery.BaseActivity
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.models.Pizza
 import com.unifor.br.pizzadelivery.models.PizzaSize
 import com.unifor.br.pizzadelivery.presenter.PizzaPresenter
 
-class PizzaDetailActivity : AppCompatActivity() {
+class PizzaDetailActivity : BaseActivity() {
     private lateinit var pizzaPresenter: PizzaPresenter
 
     private lateinit var imgPizza: ImageView

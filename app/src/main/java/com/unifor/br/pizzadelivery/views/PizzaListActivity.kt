@@ -1,17 +1,14 @@
 package com.unifor.br.pizzadelivery.views
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.view.View
 import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
+import com.unifor.br.pizzadelivery.BaseActivity
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.adapter.PizzaListAdapter
 import com.unifor.br.pizzadelivery.models.Pizza
 import com.unifor.br.pizzadelivery.presenter.PizzaPresenter
 
-class PizzaListActivity : AppCompatActivity() {
+class PizzaListActivity : BaseActivity() {
     private lateinit var listView: ListView
     private lateinit var pizzaPresenter: PizzaPresenter
     private var pizzaList: ArrayList<Pizza> = ArrayList<Pizza>()

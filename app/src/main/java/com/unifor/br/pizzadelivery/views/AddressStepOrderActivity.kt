@@ -4,15 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
+import com.unifor.br.pizzadelivery.BaseActivity
 import com.unifor.br.pizzadelivery.DeliveryAddressOptions
 import com.unifor.br.pizzadelivery.R
 import com.unifor.br.pizzadelivery.presenter.UserPresenter
 
-class AddressStepOrderActivity : AppCompatActivity() {
+class AddressStepOrderActivity : BaseActivity() {
     private lateinit var userPresenter: UserPresenter
 
     private lateinit var txtStreet: TextView
