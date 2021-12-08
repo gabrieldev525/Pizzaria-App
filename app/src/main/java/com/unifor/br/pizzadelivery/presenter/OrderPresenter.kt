@@ -15,12 +15,13 @@ class OrderPresenter(activity: Activity) {
     private var pizzaPresenter: PizzaPresenter = PizzaPresenter(activity)
 
     fun registerOrder(
-        userId: String, pizzaId: String, size: String, count: Int, paymentMethod: Int,
-        onFinish: ((result: Boolean, exception: Exception?) -> Unit)) {
+        userId: String, pizzaId: String, size: String, count: Int,
+        street: String, zip_code: String, state: String, city: String, number: String,
+        paymentMethod: Int, onFinish: ((result: Boolean, exception: Exception?) -> Unit)) {
         val orderID = UUID.randomUUID().toString()
 
         pizzaPresenter.getPizza(pizzaId) { pizzaItem ->
-            var deliveryAddress = UserAddress("", "", "", "", "")
+            var deliveryAddress = UserAddress(street, zip_code, city, state, number)
             val pizzaPrice = pizzaItem.sizes[size]!!.price ?: 0.0
             val total = pizzaPrice.times(count) ?: 0.0
 

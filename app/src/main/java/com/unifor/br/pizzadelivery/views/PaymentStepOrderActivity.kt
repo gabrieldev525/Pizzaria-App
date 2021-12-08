@@ -25,7 +25,11 @@ class PaymentStepOrderActivity : BaseActivity() {
     private var pizza_id: String? = null
     private var added_count: Int = 0
     private var size: String? = null
-    private var location: String? = null
+    private var street: String? = null
+    private var zip_code: String? = null
+    private var state: String? = null
+    private var city: String? = null
+    private var number: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +39,12 @@ class PaymentStepOrderActivity : BaseActivity() {
         pizza_id = intent.getStringExtra("pizza_id")
         added_count = intent.getIntExtra("added_count", 0)
         size = intent.getStringExtra("size")
-        location = intent.getStringExtra("location")
+        street = intent.getStringExtra("street")
+        zip_code = intent.getStringExtra("zip_code")
+        state = intent.getStringExtra("state")
+        city = intent.getStringExtra("city")
+        number = intent.getStringExtra("number")
+
         if(pizza_id == null) {
             finish()
         }
@@ -68,6 +77,7 @@ class PaymentStepOrderActivity : BaseActivity() {
             orderPresenter.registerOrder(
                 currUser!!.uid, pizza_id!!,
                 size!!, added_count!!,
+                street!!, zip_code!!, state!!, city!!, number!!,
                 Constants.PAYMENT_OPTIONS_MAP[selectedOption] ?: 1) { result, exception ->
                 if (result) {
                     val intent = Intent(this, OrderCompleteActivity::class.java)
